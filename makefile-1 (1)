@@ -1,0 +1,12 @@
+animal.exe: animal-driver.o
+	g++ animal.o animal-driver.o -o animal.exe
+
+animal-driver.o: animal.o
+	g++ -c animal-driver.cpp -o animal-driver.o
+
+animal.o: animal.cpp
+	g++ -c animal.cpp -o animal.o
+
+clean:
+	rm *.o
+	rm *.exe
